@@ -1,0 +1,12 @@
+# Auto detect text files and perform LF normalization
+# http://davidlaing.com/2012/09/19/customise-your-gitattributes-to-become-a-git-ninja/
+* text=auto
+
+*.css linguist-vendored
+*.scss linguist-vendored
+*.js linguist-vendored
+
+# Ignore the following directories/files when using git archive
+.gitattributes export-ignore
+README.md export-ignore
+CONTRIBUTING.md export-ignore
