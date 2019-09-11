@@ -19,9 +19,6 @@
 				}
 			}
 		},
-		created() {
-			// this.getPage();
-		},
 		mounted() {
 			this.$http.get(wp.root + 'wp/v2/pages/' + this.$route.meta.id)
 			.then(response => {
@@ -31,17 +28,5 @@
 				console.log(error)
 			})
 		},
-		methods: {
-
-		// 	getPage() {
-		// 		var self = this;
-		// 		 fetch(wp.root + 'wp/v2/pages/' + this.$route.meta.id).then(function(response) {
-		// 		 	return response.json()
-		// 		 }).then(function(data) {
-		// 		 	self.page = data;
-		// 		 });
-		// 	}
-
-		}
 	}
 </script>

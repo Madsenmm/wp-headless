@@ -5,9 +5,13 @@
 
 		<!-- Dynamic content -->
 		<main class="main">
+	
+		  <transition name="fade">
 			<!-- <keep-alive> -->
-				<router-view></router-view>
+				<router-view :key="$route.path"></router-view>
 			<!-- </keep-alive> -->
+			</transition>
+
 		</main>
 
 		<footer-import></footer-import>
@@ -30,4 +34,15 @@
 
 <style lang="scss">
 	@import "./assets/scss/main";
+
+	// .fade-enter-active,
+	// .fade-leave-active {
+	// 	transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+	// }
+
+	// .fade-enter,
+	// .fade-leave-to {
+	// 	transform: translateY(-1rem);
+	// 	opacity: 0;
+	// }
 </style>
