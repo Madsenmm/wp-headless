@@ -9,3 +9,4 @@ Webshop based on WordPress Headless + VueJS
 - [ ] Static site generator
 - [ ] Correct hierarchy (nested) in `rest_theme_routes`
 - [ ] Add meta tags from Yoast to routes in `rest_theme_routes`
+- [ ] Clean up `package.json` from old setup
