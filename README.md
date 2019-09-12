@@ -4,7 +4,9 @@ Webshop based on WordPress Headless + VueJS
 ## !TODO
 - [ ] Setup basic fonts and colors in `App.vue`
 - [ ] Create `development` and `production` `webpack.config`
-- [ ] `.ftppass` for `Browser-sync proxy`
+- [ ] `.ftppass` for `Browser-sync (webpack-dev-server) proxy`
+- [ ] Replace `Browser-sync` with `webpack-dev-server`, try proxy endpoint `/importwheels`
+- [ ] Add `HMR`
 - [ ] Decouple WordPress (SHORTINIT)
 - [x] Speed up WP API requests - ```(WP Rest Cache plugin)```
 - [ ] Replace `axios` with `Fetch API`
