@@ -3,13 +3,15 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
+// Array to populate
 let routes = [];
 
-for (let key in wp.routes) {
-	let route = wp.routes[key];
+// Loop routes
+for (let key in WP.routes) {
+	let route = WP.routes[key];
 
 	routes.push({
-		path: wp.base_path + route.slug,
+		path: WP.base_path + route.slug,
 		name: route.name,
 		component: require('@/components/' + capitalize(route.type)).default,
 		meta: {
@@ -29,9 +31,17 @@ for (let key in wp.routes) {
 	});
 }
 
+
+/**
+ * Helper to capitalize based on string
+ * @param  {[type]} string [description]
+ * @return {[type]}        [description]
+ */
+
 function capitalize(string) {
 	return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
 
 export default new Router({
 	hashbang: false,

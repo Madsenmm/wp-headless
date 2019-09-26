@@ -1,4 +1,23 @@
 @import 'reset';
 @import 'variables';
 
+// Mixins
+@import 'mixins/media-queries';
+@import 'mixins/grid-framework';
+@import 'mixins/grid';
+@import 'mixins/layout';
+
+// Layout
+@import 'layout/grid';
+@import 'layout/sections';
+
+// Basics
 @import 'base';
+
+// Misc
+@import 'typography';
+
+// Partials
+@import 'partials/header';
+@import 'partials/navigation';
+@import 'partials/footer';

@@ -1,9 +1,11 @@
 <template>
-	<section>
-		
-		<h1 class="entry-title">{{ page.title.rendered }}</h1>
-		<div class="entry-content" v-html="this.page.content.rendered"></div>
+	<section class="page section--l">
+		<div class="container-fluid">
 
+			<h1 class="entry-title">{{ page.title.rendered }}</h1>
+			<div class="entry-content" v-html="this.page.content.rendered"></div>
+
+		</div>
 	</section>
 </template>
 
@@ -20,7 +22,7 @@
 			}
 		},
 		mounted() {
-			this.$http.get(wp.root + 'wp/v2/pages/' + this.$route.meta.id)
+			this.$http.get(WP.root + 'wp/v2/pages/' + this.$route.meta.id)
 			.then(response => {
 				this.page = response.data
 			})

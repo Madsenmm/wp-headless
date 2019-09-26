@@ -1,0 +1,21 @@
+.nav {
+	
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+
+	}
+
+	&__link {
+		color: var(--black);
+		padding: .7rem 1rem;
+
+		&.is-active,
+		&:hover {
+			color: var(--primary);
+		}
+	}
+} 

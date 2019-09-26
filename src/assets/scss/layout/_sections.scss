@@ -1,0 +1,73 @@
+/**
+ * Sections
+ */
+
+.section {
+
+	// Color themes
+	@each $modifier, $map in $section-themes {
+		$bg          	  : map-get($map, bg);
+		$color       	  : map-get($map, color);
+		$header-color	  : map-get($map, header-color);
+		$link-color  	  : map-get($map, link-color);
+		$link-color-hover : map-get($map, link-color-hover);
+
+		&--#{$modifier} {
+			background-color: $bg;
+			color: $color;
+
+			// &.section--image {
+			// 	@include overlay(rgba($bg, .6));
+			// }
+			
+			// Header tags
+			h1, h2, h3, h4, h5, h6 {
+				color: $header-color;
+			}
+
+			// Links
+			a:not(.btn) {
+				color: $link-color;
+
+				&:hover {
+					@if ($link-color-hover) {
+						color: $link-color-hover;
+					} @else {
+						color: lighten($link-color, 5%);
+					}
+				}
+			}
+		}
+	}
+
+
+	/**
+	 * Sizes
+	 */
+
+	&--s {
+		@include padding-vertical(3rem);
+
+		@include mq(md) {
+			@include padding-vertical(5rem);
+		}
+	}
+
+	&--m {
+		@include mq-padding-vertical(
+			$default: 3rem,
+			$sm: 4rem,
+			$md: 6rem,
+			$lg: 7rem
+		);
+	}
+
+	&--l {
+		@include mq-padding-vertical(
+			$default: 3rem,
+			$sm: 5rem,
+			$md: 7rem,
+			$lg: 9rem
+		);
+	}
+}

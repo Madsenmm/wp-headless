@@ -1,0 +1,59 @@
+/**
+ * Grid system
+ * Variables are found in _variables.scss
+ **/
+
+
+/**
+ * Containers
+ **/
+
+.container {
+	@include make-container();
+	@include make-container-widths();
+
+	&--flex {
+		// @extend .flex;
+		// @extend .flex--wrap;
+		@include make-container();
+		@include make-container-widths();
+	}
+}
+
+// Fluid container
+.container-fluid {
+	@include make-container();
+
+	&--flex {
+		// @extend .flex;
+		// @extend .flex--wrap;
+		@include make-container();
+	}
+}
+
+
+/**
+ * Rows
+ **/
+
+.row {
+	@include make-row();
+
+	&--flex {
+		// @extend .flex;
+		// @extend .flex--wrap;
+		@include make-row();
+
+		// &:after {
+		// 	content: '';
+		// 	flex: auto;
+		// }
+	}
+}
+
+
+/**
+ * Grid columns
+ **/
+
+@include make-grid-columns();

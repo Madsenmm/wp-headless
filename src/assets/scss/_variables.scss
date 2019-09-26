@@ -1,4 +1,62 @@
 :root {
-	--primary: #1dd1a1;
-	--secondary: #5f27cd;
+
+	// Colors
+	// --primary: #BADC58;
+	// --secondary: #F5F5F5;
+	--primary: #2b4df3;
+	--secondary: #f7fafc;
+	--links: #0BAAA8;
+	// --secondary: #6d5a9d;
+	
+	--black: #000000;
+	--white: #FFFFFF;
+	--light: var(--secondary);
+
+	--color-text: darken(var(--secondary), 15%);
+	--color-heading: #130F40;
+
+	// Fonts
+	--body: 'Poppins', sans-serif;
+	--heading: 'Poppins', sans-serif;
+
+	// Grid
+	--gutter: 3rem;
 }
+
+
+/**
+ * Section themes
+ * Classes are generated in _sections.scss
+ **/
+
+$section-themes: (
+	primary: (bg: var(--primary), color: var(--color-text), header-color: var(--color-heading), link-color: var(--white), link-color-hover: var(--black)),
+	secondary: (bg: var(--secondary), color: var(--color-text), header-color: var(--color-heading), link-color: var(--white), link-color-hover: var(--black)),
+);
+
+
+/**
+ * Media queries - breakpoints
+ **/
+
+$grid-breakpoints: (
+	xs:	480px,
+	sm:	768px,
+	md:	992px,
+	lg:	1200px
+) !default;
+
+
+/**
+ * Grid settings
+ **/
+
+$grid-columns: 12;
+$grid-gutter-width: 3rem;
+
+// Container widths
+$container-widths: (
+	sm: 75rem,
+	md: 97rem,
+	lg: 117rem
+);
