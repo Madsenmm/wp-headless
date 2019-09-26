@@ -6,7 +6,7 @@ Webshop based on WordPress Headless + VueJS
 - [ ] Convert all `SASS` variables to `CSS` variables
 - [ ] Include flexbox helpers like bootstraps
 - [ ] Include `bLazy` for lazyloading of images
-- [ ] Setup basic fonts and colors in `App.vue`
+- [x] Setup basic fonts and colors in `App.vue`
 - [ ] Create `development` and `production` `webpack.config`
 - [ ] `.ftppass` for `Browser-sync (webpack-dev-server) proxy`
 - [ ] Replace `Browser-sync` with `webpack-dev-server`, try proxy endpoint `/importwheels`
