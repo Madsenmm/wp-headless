@@ -16,6 +16,7 @@
   "author": "Tobias M. Madsen",
   "license": "ISC",
   "dependencies": {
+    "@woocommerce/woocommerce-rest-api": "^1.0.1",
     "axios": "^0.19.0",
     "vue": "^2.6.10",
     "vue-router": "^3.1.3"

@@ -2,8 +2,12 @@ import Vue from 'vue';
 import axios from 'axios';
 import App from './App';
 
-import router from './router'
-import meta from './router/metaguard'
+import router from './router';
+import meta from './router/metaguard';
+
+import WC from './config/woocommerce.config';
+
+Vue.prototype.$WC = WC;
 
 Vue.config.productionTip = false
 Vue.config.silent = true

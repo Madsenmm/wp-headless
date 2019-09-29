@@ -1,0 +1,10 @@
+.sidebar {
+	background-color: var(--light);
+	color: var(--color-text);
+	padding: 3rem;
+
+	@include mq(md) {
+		padding: 5rem 4rem;
+		flex-basis: 30%;
+	}
+}

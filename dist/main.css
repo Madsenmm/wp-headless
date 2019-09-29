@@ -906,6 +906,13 @@ em {
 strong {
   font-weight: bold;
 }
+.page {
+  display: flex;
+  flex-wrap: wrap;
+}
+.page__inner {
+    flex: 1;
+}
 .header {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -926,6 +933,17 @@ strong {
 .footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+.sidebar {
+  background-color: var(--light);
+  color: var(--color-text);
+  padding: 3rem;
+}
+@media (min-width: 992px) {
+.sidebar {
+      padding: 5rem 4rem;
+      flex-basis: 30%;
+}
 }
 
 h1[data-v-469af010], h2[data-v-469af010] {
