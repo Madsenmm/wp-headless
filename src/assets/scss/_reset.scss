@@ -46,3 +46,59 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+
+
+/**
+ * Form reset/basic styling
+ **/ 
+
+input,
+select,
+button,
+textarea {
+	display: inline-block;
+	font-size: inherit;
+	font-family: inherit;
+	line-height: inherit;
+	white-space: normal;
+	border-radius: 0;
+	outline: none;
+}
+
+textarea {
+	vertical-align: top;
+	overflow: auto;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+button {
+	-webkit-appearance: none;
+}
+
+
+/**
+ * Placeholders
+ **/ 
+
+::-webkit-input-placeholder {
+	color: inherit;
+}
+
+:-moz-placeholder {
+	color: inherit;
+}
+
+::-moz-placeholder {
+	color: inherit;
+	opacity: 1;
+}
+
+:-ms-input-placeholder {  
+	color: inherit;
+}
+
+// Search
+::-webkit-search-decoration {
+	display: none;
+}

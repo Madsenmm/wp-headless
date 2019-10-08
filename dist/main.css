@@ -46,6 +46,50 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/**
+ * Form reset/basic styling
+ **/
+input,
+select,
+button,
+textarea {
+  display: inline-block;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  white-space: normal;
+  border-radius: 0;
+  outline: none;
+}
+textarea {
+  vertical-align: top;
+  overflow: auto;
+}
+input:not([type="radio"]):not([type="checkbox"]),
+button {
+  -webkit-appearance: none;
+}
+
+/**
+ * Placeholders
+ **/
+::-webkit-input-placeholder {
+  color: inherit;
+}
+:-moz-placeholder {
+  color: inherit;
+}
+::-moz-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: inherit;
+}
+::-webkit-search-decoration {
+  display: none;
+}
 :root {
   --primary: #2b4df3;
   --secondary: #f7fafc;
@@ -53,6 +97,8 @@ table {
   --black: #000000;
   --white: #FFFFFF;
   --light: var(--secondary);
+  --grey-light: #ebedef;
+  --grey-border: #e0e0e0;
   --color-text: darken(var(--secondary), 15%);
   --color-heading: #130F40;
   --body: 'Poppins', sans-serif;
@@ -939,6 +985,11 @@ strong {
   color: var(--color-text);
   padding: 3rem;
 }
+@media (min-width: 768px) {
+.sidebar {
+      flex-basis: 40%;
+}
+}
 @media (min-width: 992px) {
 .sidebar {
       padding: 5rem 4rem;
@@ -959,5 +1010,47 @@ li[data-v-469af010] {
 }
 a[data-v-469af010] {
   color: #42b983;
+}
+
+.widget + .widget[data-v-4ca18318] {
+  margin-top: 3rem;
+}
+.widget__inner[data-v-4ca18318] {
+  background-color: var(--white);
+  color: var(--black);
+}
+.widget__title[data-v-4ca18318] {
+  text-align: center;
+  border-bottom: 0.1rem solid var(--grey-light);
+  padding: 1.2rem 1.5rem;
+  margin: 0 !important;
+}
+.widget__content[data-v-4ca18318] {
+  padding: 1.7rem 1.5rem;
+}
+.filter__list[data-v-4ca18318] {
+  display: flex;
+  flex-wrap: wrap;
+}
+.filter--btn[data-v-4ca18318] {
+  width: 5rem;
+  height: 5rem;
+  margin-top: .5rem;
+  margin-right: .5rem;
+  color: var(--grey-light);
+  background-color: var(--white);
+  border: 0.1rem solid var(--grey-border);
+  outline: 0;
+  cursor: pointer;
+  font-size: .9em;
+  line-height: 1;
+  padding: .5rem;
+  flex-grow: 1;
+  text-align: center;
+  transition: all .4s ease;
+}
+.filter--btn.active[data-v-4ca18318], .filter--btn[data-v-4ca18318]:hover {
+    border-color: var(--black);
+    color: var(--black);
 }
 

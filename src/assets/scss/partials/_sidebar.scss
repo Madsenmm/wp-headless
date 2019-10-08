@@ -3,6 +3,10 @@
 	color: var(--color-text);
 	padding: 3rem;
 
+	@include mq(sm) {
+		flex-basis: 40%;
+	}
+
 	@include mq(md) {
 		padding: 5rem 4rem;
 		flex-basis: 30%;
